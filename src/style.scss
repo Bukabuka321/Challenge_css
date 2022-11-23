@@ -1,0 +1,28 @@
+@mixin flex {
+    display: flex;
+}
+@mixin border-width {
+    border-width: 0.1em;
+}
+.container {
+    margin: 5%;
+    @include flex;
+    flex-wrap: wrap;
+    width: 50%;
+    border-style: solid;
+    @include border-width;
+}
+.main_info {
+    border-bottom-style: solid;
+    @include border-width;
+    .photo {
+        border-right-style: solid;
+        @include border-width;
+        width: 20%;
+        img {
+            width: 100%;
+        }
+    }
+    @include flex;
+    flex-wrap: nowrap;
+}
